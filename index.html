@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Multiple File Upload</title>
+	<!-- Latest compiled and minified CSS & JS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body ng-controller="myCtrl">
+	
+	<div class="container">
+		<div class="upload-form">
+			<form action="" method="POST" role="form">
+				<legend>Multiple File Upload</legend>
+			
+				<div class="form-group">
+					<label for="exampleInputfile">Upload</label>
+					<input type="file" class="form-control" id="exampleInputfile" file-model="files" multiple>
+				</div>
+			
+				<button type="submit" class="btn btn-primary" ng-click="Submit">Submit</button>
+			</form>	
+
+			<div ng-repeat="file in files">
+				{{file}}
+			</div>
+
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
